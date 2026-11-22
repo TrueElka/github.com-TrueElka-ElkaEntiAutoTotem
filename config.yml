@@ -1,0 +1,20 @@
+# TrueElka - AutoTotem detection
+
+# Minimum human delay (ms) between a totem pop and putting a new totem in offhand.
+# The player's ping is subtracted before comparing. A human is almost never under ~100ms.
+min-delay-ms: 110
+
+# Violation points added per flag (extra +1 if delay is extremely low)
+vl-per-flag: 1.0
+
+# VL decays by this much every minute
+vl-decay-per-minute: 0.5
+
+# Alert message sent to staff with permission trueelka.alerts
+# Placeholders: %player% %delay% %ping% %vl% %source%
+alert-message: "&8[&cTrueElka&8] &f%player% &7suspected &cAutoTotem &8(&7delay: &f%delay%ms&7, ping: &f%ping%ms&7, vl: &c%vl%&8)"
+
+# Punishment: run commands when VL reaches the threshold (set to 0 to disable)
+punish-vl: 0
+punish-commands:
+  - "kick %player% &cUnfair advantage detected (AutoTotem)"

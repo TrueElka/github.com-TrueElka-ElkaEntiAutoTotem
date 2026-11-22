@@ -1,0 +1,20 @@
+name: TrueElka
+version: 1.0.0
+main: ma.trueelka.TrueElka
+api-version: "1.20"
+description: Anti-cheat module that detects AutoTotem
+commands:
+  trueelka:
+    description: TrueElka admin command
+    usage: /trueelka <reload|vl <player>>
+    permission: trueelka.admin
+permissions:
+  trueelka.alerts:
+    description: Receive AutoTotem alerts
+    default: op
+  trueelka.admin:
+    description: Use /trueelka
+    default: op
+  trueelka.bypass:
+    description: Not checked by TrueElka
+    default: false
